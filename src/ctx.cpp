@@ -56,7 +56,7 @@
 #endif
 
 #ifdef ZMQ_HAVE_VMCI
-#include <vmci_sockets.h>
+#include "vmci_sockets.h"
 #endif
 
 #define ZMQ_CTX_TAG_VALUE_GOOD 0xabadcafe

@@ -36,7 +36,7 @@
 #include "ctx.hpp"
 
 #if defined(ZMQ_HAVE_VMCI)
-#include <vmci_sockets.h>
+#include "vmci_sockets.h"
 
 namespace zmq
 {

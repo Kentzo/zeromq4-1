@@ -505,7 +505,6 @@ endif(WITH_OPENPGM)
 
 if(WITH_VMCI)
     add_definitions(-DZMQ_HAVE_VMCI)
-    include_directories(${VMCI_INCLUDE_DIRS})
     list(APPEND cxx-sources vmci_address.cpp vmci_connecter.cpp vmci_listener.cpp vmci.cpp)
 endif(WITH_VMCI)
 

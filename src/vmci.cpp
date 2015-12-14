@@ -32,7 +32,7 @@
 #if defined ZMQ_HAVE_VMCI
 
 #include <cassert>
-#include <vmci_sockets.h>
+#include "vmci_sockets.h"
 
 void zmq::tune_vmci_buffer_size (ctx_t *context_, fd_t sockfd_, uint64_t default_size_, uint64_t min_size_, uint64_t max_size_)
 {

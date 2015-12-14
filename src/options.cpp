@@ -77,12 +77,14 @@ zmq::options_t::options_t () :
     connected (false),
     heartbeat_ttl (0),
     heartbeat_interval (0),
-    heartbeat_timeout (-1),
-    vmci_buffer_size (0),
-    vmci_buffer_min_size (0),
-    vmci_buffer_max_size (0),
-    vmci_connect_timeout (-1)
+    heartbeat_timeout (-1)
 {
+#if defined ZMQ_HAVE_VMCI
+    vmci_buffer_size = 0;
+    vmci_buffer_min_size = 0;
+    vmci_buffer_max_size = 0;
+    vmci_connect_timeout = -1;
+#endif
 }
 
 int zmq::options_t::setsockopt (int option_, const void *optval_,

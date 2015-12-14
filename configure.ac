@@ -479,7 +479,7 @@ AC_MSG_CHECKING("with_norm_ext = ${with_norm_ext}")
 if test "x$with_norm_ext" != "xno"; then
     AC_DEFINE(ZMQ_HAVE_NORM, 1, [Have NORM protocol extension])
 
-    if test "x$wwith_norm_ext" != "xyes"; then
+    if test "x$with_norm_ext" != "xyes"; then
         norm_path="${with_norm_ext}"
         LIBZMQ_EXTRA_CXXFLAGS="-I${norm_path}/include ${LIBZMQ_EXTRA_CXXFLAGS}"
         LIBZMQ_EXTRA_LDFLAGS="-I${norm_path}/include ${LIBZMQ_EXTRA_LDFLAGS}"
@@ -494,7 +494,7 @@ have_vmci_library="no"
 AC_ARG_WITH([vmci], [AS_HELP_STRING([--with-vmci],
     [build libzmq with VMCI transport [default=no]])],
     [have_vmci_ext=$withval],
-    [have_vmci_ext=yes])
+    [have_vmci_ext=no])
 
 if test "x$have_vmci_ext" != "xno"; then
     AC_DEFINE(ZMQ_HAVE_VMCI, 1, [Have VMCI transport])
